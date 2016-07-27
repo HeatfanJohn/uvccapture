@@ -44,3 +44,12 @@ to do this.
 This software depends on jpeglib(present on almost all systems)
 
 For usage information, run uvccapture -h
+
+2016-07-13: To compile under Debian GNU/Linux 8 (jessie) NextThing CHIP the
+following steps were required:
+
+- sudo apt-get install libjpeg-dev
+- sudo apt-get install libv4l-dev
+- cd /usr/include/linux
+- sudo ln -s ../libv4l1-videodev.h videodev.h
+
