@@ -332,17 +332,19 @@ int main (int argc, char *argv[])
 
     //Reset all camera controls
     if (verbose >= 1)
-        fprintf (stderr, "Resetting camera settings\nReset V4L_CID_BRIGHTNESS\n");
+        fprintf (stderr, "Resetting camera settings:\n");
     v4l2ResetControl (videoIn, V4L2_CID_BRIGHTNESS);
     if (verbose >= 1)
-        fprintf (stderr, "Reset V4L_CID_CONTRAST\n");
+        fprintf (stderr, "V4L_CID_BRIGHTNESS was reset.\n");
     v4l2ResetControl (videoIn, V4L2_CID_CONTRAST);
     if (verbose >= 1)
-        fprintf (stderr, "Reset V4L_CID_SATURATION\n");
+        fprintf (stderr, "V4L_CID_CONTRAST was reset.\n");
     v4l2ResetControl (videoIn, V4L2_CID_SATURATION);
     if (verbose >= 1)
-        fprintf (stderr, "Reset V4L_CID_GAIN\n");
+        fprintf (stderr, "V4L_CID_SATURATION was reset.\n");
     v4l2ResetControl (videoIn, V4L2_CID_GAIN);
+    if (verbose >= 1)
+        fprintf (stderr, "V4L_CID_GAIN was reset.\n");
 
     //Setup Camera Parameters
     if (brightness != 0) {
